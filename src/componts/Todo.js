@@ -20,7 +20,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import ModeEditIcon from "@mui/icons-material/ModeEdit";
 
 //import from react
-import { use, useContext, useState } from "react";
+import { useContext, useState } from "react";
 
 //import componts
 import { ToDoList } from "../conText/todoList";
