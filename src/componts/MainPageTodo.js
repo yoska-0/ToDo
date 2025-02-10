@@ -63,8 +63,9 @@ export default function MainPageTodo() {
   }
 
   useEffect(() => {
-    const dataTasksStoreg = localStorage.getItem("tasksStoreg");
-    setTasks(JSON.parse(dataTasksStoreg));
+    const dataTasksStoreg =
+      JSON.parse(localStorage.getItem("tasksStoreg")) ?? [];
+    setTasks(dataTasksStoreg);
   }, []);
   return (
     <Container fixed maxWidth="sm" style={{ marginTop: "150px" }}>
