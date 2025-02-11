@@ -66,6 +66,7 @@ export default function MainPageTodo() {
     const dataTasksStoreg =
       JSON.parse(localStorage.getItem("tasksStoreg")) ?? [];
     setTasks(dataTasksStoreg);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <Container fixed maxWidth="sm" style={{ marginTop: "150px" }}>
