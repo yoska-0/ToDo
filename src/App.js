@@ -1,8 +1,7 @@
 import "./App.css";
 import MainPageTodo from "./componts/MainPageTodo";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { ToDoList } from "./conText/todoList";
-import { useState } from "react";
+import { TodoProvider } from "./conText/todoList";
 
 const theme = createTheme({
   typography: {
@@ -14,8 +13,6 @@ const theme = createTheme({
 });
 
 function App() {
-  const [tasks, setTasks] = useState([]);
-
   return (
     <ThemeProvider theme={theme}>
       <div
@@ -25,9 +22,9 @@ function App() {
           alignItems: "center",
         }}
       >
-        <ToDoList.Provider value={{ tasks, setTasks }}>
+        <TodoProvider>
           <MainPageTodo />
-        </ToDoList.Provider>
+        </TodoProvider>
       </div>
     </ThemeProvider>
   );
